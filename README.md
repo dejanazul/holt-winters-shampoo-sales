@@ -60,7 +60,8 @@ Example:
 - Visual representation of real sales data vs predicted values.
 - Effective capture of trend and seasonality over time.
 
-> 📷 *(Recommended: add example plot image here)*
+> 📷 * Result Visualization *
+![Holt-Winters Forecasting Result](holt_winters_result.png)
 
 ---
 
