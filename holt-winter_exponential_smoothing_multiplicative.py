@@ -114,3 +114,22 @@ print("Holt Winter Multiplicative Model Evaluation")
 print(f"mean absolute error = {mean_absolute_error:.3f}")
 print(f"mean squared error = {mean_squared_error:.3f}")
 print(f"Mean Absolute Percentage Error (MAPE) = {mape:.2f}%")
+
+# Result visualization
+plt.figure(figsize=(12, 6))
+plt.plot(df["Month"], df["Sales"], label="Actual Sales", marker='o')
+forecast_months = df["Month"][13:36]  # Adjusted to match Fts length
+plt.plot(forecast_months, Fts, label="Predicted Sales", linestyle='--', marker='x')
+
+# Formatting
+plt.title("Actual vs Predicted Shampoo Sales (Holt-Winters Multiplicative Model)")
+plt.xlabel("Month")
+plt.ylabel("Sales")
+plt.xticks(rotation=45)
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+
+# Save png
+plt.savefig('holt_winters_result.png', dpi=300)
+plt.show()
